@@ -2,9 +2,7 @@ package br.com.letscode.spring.projetofinal.pizza;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,11 +12,12 @@ import javax.persistence.Id;
 @Entity
 public class Pizza {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "sabor", nullable = false)
     private String sabor;
 
-    @Column(nullable = false)
-    private double preco;
+    @Column(name = "preco", nullable = false)
+    private String preco;
 }
