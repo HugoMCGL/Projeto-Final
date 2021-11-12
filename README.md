@@ -7,7 +7,7 @@ Foi utilizado o Banco de Dados H2 juntamente com o Swagger UI para vizualizaçã
 
 👨‍💻 Funcionalidades: 
 
-Cadastro de pizzas e clientes
-Alteração de pizzas e clientes
-Remoção de pizzas e clientes
+Cadastro de pizzas e clientes<p>
+Alteração de pizzas e clientes<p>
+Remoção de pizzas e clientes<p>
 Consulta no banco de dados para verificar as pizzas ou os clientes cadastrados
