@@ -1,25 +1,31 @@
 package br.com.letscode.spring.projetofinal.cliente;
 
-import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@ToString
+@Builder
 @Entity
-public class Cliente {
-    @Id
-    private Long telefone;
 
-    @Column(nullable = false)
+public class Cliente implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(nullable = false)
-    private String endereco;
+    @Column(name = "telefone", nullable = false)
+    private String telefone;
 
+    @Column(name = "endereco", nullable = false)
+    private String endereco;
 }
