@@ -16,15 +16,16 @@ import javax.persistence.*;
 
 public class Pedido {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numeroPedido;
 
     @OneToOne
-    @JoinColumn(name = "telefone_cliente")
+    @JoinColumn(name = "telefonecliente")
     private Cliente cliente;
 
 
     @ManyToOne
-    @JoinColumn(name = "pizza_id")
+    @JoinColumn(name = "pizzaid")
     private Pizza pizza;
 
     @Column(nullable = false)
