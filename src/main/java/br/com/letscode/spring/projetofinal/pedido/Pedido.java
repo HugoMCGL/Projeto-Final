@@ -20,12 +20,12 @@ public class Pedido {
     private Long numeroPedido;
 
     @OneToOne
-    @JoinColumn(name = "telefonecliente")
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
 
     @ManyToOne
-    @JoinColumn(name = "pizzaid")
+    @JoinColumn(name = "pizza_id")
     private Pizza pizza;
 
     @Column(nullable = false)
