@@ -18,13 +18,13 @@ public class Pedido {
     @Id
     private Long numeroPedido;
 
-    @ManyToOne
-    @JoinColumn(name = "Cliente", foreignKey = @ForeignKey(name = "FK_CLIENTE_NAME", value = ConstraintMode.NO_CONSTRAINT))
+    @OneToOne
+    @JoinColumn(name = "telefone_cliente")
     private Cliente cliente;
 
 
     @ManyToOne
-    @JoinColumn(name = "Pizza", foreignKey = @ForeignKey(name = "FK_PIZZA_NAME", value = ConstraintMode.NO_CONSTRAINT))
+    @JoinColumn(name = "pizza_id")
     private Pizza pizza;
 
     @Column(nullable = false)
